@@ -1,0 +1,101 @@
+body {
+    direction: ltr;
+    display: flex;
+    justify-content: center;
+    background-color: #ffccbc;
+    align-items: center;
+    height: 100vh;
+}
+
+.action {
+    position: fixed;
+    top: 30%;
+/*
+    right: 50%;
+    transform: translateX(50%);
+*/
+}
+
+.action .profile {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    
+}
+.action .profile img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+.action .menu {
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    background-color: #fff;
+    width: 400px;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all .3s ease-in-out;
+}
+
+.action .menu.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.action .menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+
+.action .menu h3 {
+    text-align: center;
+    padding: 20px;
+    font-weight: 900;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.action .menu h3 span {
+    font-size: 14px;
+    color: #777;
+}
+
+.action ul {
+    width: 100%;
+    list-style: none;
+    padding: 0 30px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+
+.action ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+   
+}
+
+.action ul li img {
+    width: 30px;
+    margin-right: 10px;
+    opacity: .6;
+}
+
+.action ul li a {
+    text-decoration: none;
+    color: #000;
+}
